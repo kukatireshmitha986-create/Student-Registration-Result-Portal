@@ -27,6 +27,14 @@ The project provides a structured portal where students can register their detai
 
 ---
 
+## 🌐 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Student%20Registration%20Portal-blue?style=for-the-badge)](https://kukatireshmitha986-create.github.io/Student-Registration-Result-Portal/)
+
+🚀 **[Open Student Registration & Result Portal](https://kukatireshmitha986-create.github.io/Student-Registration-Result-Portal/)**
+
+The project is deployed using GitHub Pages and is available as a live web application.
+
 ## 🎯 Project Objectives
 
 The main objectives of this project are:
