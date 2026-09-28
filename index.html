@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- HTML5 Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Student Registration & Result Portal</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ===================================================== -->
+    <!-- NAVIGATION BAR -->
+    <!-- ===================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#home">
+                🎓 Student Portal
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registration">
+                            Registration
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#result">
+                            Result
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#students">
+                            Students
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            About
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ===================================================== -->
+    <!-- HOME SECTION -->
+    <!-- ===================================================== -->
+
+    <section id="home" class="hero-section">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-7">
+
+                    <h1 class="display-4 fw-bold">
+                        Student Registration & Result Portal
+                    </h1>
+
+                    <p class="lead mt-3">
+                        A responsive web application for registering
+                        student details, entering examination marks,
+                        calculating results and displaying Pass/Fail
+                        status dynamically.
+                    </p>
+
+                    <a href="#registration"
+                       class="btn btn-light btn-lg mt-3">
+                        Register Student
+                    </a>
+
+                </div>
+
+                <div class="col-lg-5 mt-4 mt-lg-0">
+
+                    <div class="card shadow-lg">
+
+                        <div class="card-body text-center p-4">
+
+                            <div class="display-1">
+                                🎓
+                            </div>
+
+                            <h3 class="fw-bold mt-3">
+                                Academic Portal
+                            </h3>
+
+                            <p class="text-muted mb-0">
+                                Register • Calculate • View Results
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- REGISTRATION SECTION -->
+    <!-- ===================================================== -->
+
+    <section id="registration" class="py-5">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Student Registration
+                </h2>
+
+                <p class="text-muted">
+                    Enter student personal and academic information
+                </p>
+
+            </div>
+
+
+            <!-- Registration Form -->
+
+            <form id="studentForm" novalidate>
+
+                <div class="row g-4">
+
+
+                    <!-- ================================================= -->
+                    <!-- PERSONAL INFORMATION CARD -->
+                    <!-- ================================================= -->
+
+                    <div class="col-lg-6">
+
+                        <div class="card shadow-sm h-100">
+
+                            <div class="card-header bg-primary text-white">
+
+                                <h5 class="mb-0">
+                                    👤 Personal Information
+                                </h5>
+
+                            </div>
+
+                            <div class="card-body">
+
+                                <!-- Student Name -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="studentName"
+                                        class="form-label fw-semibold">
+
+                                        Student Name
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="studentName"
+                                        placeholder="Enter student name"
+                                        required
+                                        minlength="3">
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid student name.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Register Number -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="registerNumber"
+                                        class="form-label fw-semibold">
+
+                                        Register Number
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="registerNumber"
+                                        placeholder="Enter register number"
+                                        required
+                                        pattern="[A-Za-z0-9]+">
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid register number.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Email -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="email"
+                                        class="form-label fw-semibold">
+
+                                        Email Address
+
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="student@example.com"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Mobile Number -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="mobile"
+                                        class="form-label fw-semibold">
+
+                                        Mobile Number
+
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="mobile"
+                                        placeholder="Enter 10-digit mobile number"
+                                        pattern="[0-9]{10}"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Please enter a valid 10-digit mobile number.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Date of Birth -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="dob"
+                                        class="form-label fw-semibold">
+
+                                        Date of Birth
+
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        id="dob"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Please select date of birth.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Gender -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="gender"
+                                        class="form-label fw-semibold">
+
+                                        Gender
+
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="gender"
+                                        required>
+
+                                        <option value="">
+                                            Select Gender
+                                        </option>
+
+                                        <option value="Male">
+                                            Male
+                                        </option>
+
+                                        <option value="Female">
+                                            Female
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+
+                                    <div class="invalid-feedback">
+                                        Please select gender.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================================= -->
+                    <!-- ACADEMIC INFORMATION CARD -->
+                    <!-- ================================================= -->
+
+                    <div class="col-lg-6">
+
+                        <div class="card shadow-sm h-100">
+
+                            <div class="card-header bg-success text-white">
+
+                                <h5 class="mb-0">
+                                    📚 Academic Information
+                                </h5>
+
+                            </div>
+
+                            <div class="card-body">
+
+
+                                <!-- Course -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="course"
+                                        class="form-label fw-semibold">
+
+                                        Course
+
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="course"
+                                        required>
+
+                                        <option value="">
+                                            Select Course
+                                        </option>
+
+                                        <option value="B.Tech Artificial Intelligence & Data Science">
+                                            B.Tech Artificial Intelligence & Data Science
+                                        </option>
+
+                                        <option value="B.Tech Computer Science Engineering">
+                                            B.Tech Computer Science Engineering
+                                        </option>
+
+                                        <option value="B.Tech Information Technology">
+                                            B.Tech Information Technology
+                                        </option>
+
+                                        <option value="B.E. Electronics & Communication Engineering">
+                                            B.E. Electronics & Communication Engineering
+                                        </option>
+
+                                        <option value="B.E. Mechanical Engineering">
+                                            B.E. Mechanical Engineering
+                                        </option>
+
+                                    </select>
+
+                                    <div class="invalid-feedback">
+                                        Please select a course.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Semester -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="semester"
+                                        class="form-label fw-semibold">
+
+                                        Semester
+
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="semester"
+                                        required>
+
+                                        <option value="">
+                                            Select Semester
+                                        </option>
+
+                                        <option value="Semester 1">
+                                            Semester 1
+                                        </option>
+
+                                        <option value="Semester 2">
+                                            Semester 2
+                                        </option>
+
+                                        <option value="Semester 3">
+                                            Semester 3
+                                        </option>
+
+                                        <option value="Semester 4">
+                                            Semester 4
+                                        </option>
+
+                                        <option value="Semester 5">
+                                            Semester 5
+                                        </option>
+
+                                        <option value="Semester 6">
+                                            Semester 6
+                                        </option>
+
+                                        <option value="Semester 7">
+                                            Semester 7
+                                        </option>
+
+                                        <option value="Semester 8">
+                                            Semester 8
+                                        </option>
+
+                                    </select>
+
+                                    <div class="invalid-feedback">
+                                        Please select a semester.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Python -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="python"
+                                        class="form-label fw-semibold">
+
+                                        Python
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="python"
+                                        placeholder="Enter marks (0-100)"
+                                        min="0"
+                                        max="100"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Marks must be between 0 and 100.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Data Structures -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="dataStructures"
+                                        class="form-label fw-semibold">
+
+                                        Data Structures
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="dataStructures"
+                                        placeholder="Enter marks (0-100)"
+                                        min="0"
+                                        max="100"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Marks must be between 0 and 100.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- DBMS -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="dbms"
+                                        class="form-label fw-semibold">
+
+                                        Database Management System
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="dbms"
+                                        placeholder="Enter marks (0-100)"
+                                        min="0"
+                                        max="100"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Marks must be between 0 and 100.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Computer Networks -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="computerNetworks"
+                                        class="form-label fw-semibold">
+
+                                        Computer Networks
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="computerNetworks"
+                                        placeholder="Enter marks (0-100)"
+                                        min="0"
+                                        max="100"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Marks must be between 0 and 100.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Web Technology -->
+
+                                <div class="mb-3">
+
+                                    <label
+                                        for="webTechnology"
+                                        class="form-label fw-semibold">
+
+                                        Web Technology
+
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="webTechnology"
+                                        placeholder="Enter marks (0-100)"
+                                        min="0"
+                                        max="100"
+                                        required>
+
+                                    <div class="invalid-feedback">
+                                        Marks must be between 0 and 100.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================================================= -->
+                    <!-- BUTTONS -->
+                    <!-- ================================================= -->
+
+                    <div class="col-12">
+
+                        <div class="card shadow-sm">
+
+                            <div class="card-body text-center">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-primary btn-lg px-5 me-2">
+
+                                    Calculate Result
+
+                                </button>
+
+                                <button
+                                    type="reset"
+                                    class="btn btn-outline-secondary btn-lg px-5">
+
+                                    Reset
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- RESULT SECTION -->
+    <!-- ===================================================== -->
+
+    <section id="result" class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Student Result
+                </h2>
+
+                <p class="text-muted">
+                    Calculated result will appear here
+                </p>
+
+            </div>
+
+
+            <!-- Initial Alert -->
+
+            <div
+                id="resultPlaceholder"
+                class="alert alert-info text-center">
+
+                Register a student and calculate the result
+                to view the academic performance.
+
+            </div>
+
+
+            <!-- Dynamic Result Card -->
+
+            <div
+                id="resultCard"
+                class="card shadow d-none">
+
+                <div class="card-header bg-primary text-white">
+
+                    <h4 class="mb-0">
+                        📊 Examination Result
+                    </h4>
+
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Student Name:</strong>
+                                <span id="resultName"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Register Number:</strong>
+                                <span id="resultRegister"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Email:</strong>
+                                <span id="resultEmail"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Course:</strong>
+                                <span id="resultCourse"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Semester:</strong>
+                                <span id="resultSemester"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Total Marks:</strong>
+                                <span id="totalMarks"></span>
+                                / 500
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Percentage:</strong>
+                                <span id="percentage"></span>
+                            </p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p>
+                                <strong>Status:</strong>
+                                <span id="status"></span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Subject Marks -->
+
+                    <hr>
+
+                    <h5 class="fw-bold mb-3">
+                        Subject-wise Marks
+                    </h5>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered table-striped">
+
+                            <thead class="table-primary">
+
+                                <tr>
+
+                                    <th>Subject</th>
+
+                                    <th>Marks</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>Python</td>
+                                    <td id="resultPython"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Data Structures</td>
+                                    <td id="resultDataStructures"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Database Management System</td>
+                                    <td id="resultDbms"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Computer Networks</td>
+                                    <td id="resultComputerNetworks"></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Web Technology</td>
+                                    <td id="resultWebTechnology"></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- REGISTERED STUDENTS SECTION -->
+    <!-- ===================================================== -->
+
+    <section id="students" class="py-5">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Registered Students
+                </h2>
+
+                <p class="text-muted">
+                    Student results are dynamically added to this table
+                </p>
+
+            </div>
+
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <div class="table-responsive">
+
+                        <table
+                            id="studentTable"
+                            class="table table-bordered table-striped table-hover text-center">
+
+                            <thead class="table-primary">
+
+                                <tr>
+
+                                    <th>S.No</th>
+
+                                    <th>Register Number</th>
+
+                                    <th>Student Name</th>
+
+                                    <th>Course</th>
+
+                                    <th>Total</th>
+
+                                    <th>Percentage</th>
+
+                                    <th>Status</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="studentTableBody">
+
+                                <!-- JavaScript will add students here -->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- ABOUT SECTION -->
+    <!-- ===================================================== -->
+
+    <section id="about" class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="section-heading text-center mb-5">
+
+                <h2 class="fw-bold">
+                    About the Project
+                </h2>
+
+            </div>
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body text-center">
+
+                            <div class="display-5">
+                                📝
+                            </div>
+
+                            <h5 class="fw-bold mt-3">
+                                HTML5
+                            </h5>
+
+                            <p class="text-muted">
+                                Used to create forms, input fields,
+                                tables, sections and the overall
+                                structure of the portal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body text-center">
+
+                            <div class="display-5">
+                                🎨
+                            </div>
+
+                            <h5 class="fw-bold mt-3">
+                                Bootstrap 5
+                            </h5>
+
+                            <p class="text-muted">
+                                Used for responsive layouts, cards,
+                                forms, buttons, navigation,
+                                tables and alerts.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="card h-100 shadow-sm">
+
+                        <div class="card-body text-center">
+
+                            <div class="display-5">
+                                ⚙️
+                            </div>
+
+                            <h5 class="fw-bold mt-3">
+                                JavaScript
+                            </h5>
+
+                            <p class="text-muted">
+                                Used for validation, calculations,
+                                Pass/Fail determination,
+                                DOM manipulation and dynamic updates.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <p class="mb-1 fw-bold">
+                Student Registration & Result Portal
+            </p>
+
+            <p class="mb-0">
+                Developed using HTML5, Bootstrap 5, JavaScript & CSS3
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ===================================================== -->
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <!-- ===================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Custom JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
